@@ -9,3 +9,4 @@ public/uploads/*
 rails_best_practices_output.html
 .DS_Store
 config/database.yml
+config/deploy.rb
