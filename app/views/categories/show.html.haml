@@ -1,0 +1,18 @@
+#categories
+  .row
+    .col-md-3
+      %h4 Каталог мебели
+      = render 'shared/left_nav', current_id: params[:id]
+    .col-md-9
+      .title
+        %span= resource.name
+      .row
+        - resource.items.each do |item|
+          .col-xs-6.col-sm-3
+            .category-item
+              .item-img
+                = link_to [resource, item] do
+                  = image_tag item.images.last.image.url(:normal), class: 'img-responsive'
+              %p.text-center= link_to item.name, [resource, item]
+
+

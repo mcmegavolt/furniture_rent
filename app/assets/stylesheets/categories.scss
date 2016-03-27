@@ -1,0 +1,24 @@
+// Place all the styles related to the categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#categories {
+
+	.category-item {
+		padding: 15px;
+		.item-img {
+			margin-bottom: 15px;
+			img {
+				-webkit-transition: all 100ms ease-in-out;
+				-moz-transition: all 100ms ease-in-out;
+				-ms-transition: all 100ms ease-in-out;
+				-o-transition: all 100ms ease-in-out;
+				transition: all 100ms ease-in-out;
+			}
+			a:hover img {
+				opacity: 0.8;
+			}
+		}
+	}
+  
+}

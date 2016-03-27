@@ -1,0 +1,27 @@
+#home
+  #carousel-example-generic.carousel.slide.hidden-xs{"data-ride" => "carousel"}
+    %ol.carousel-indicators
+      %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+    .carousel-inner{:role => "listbox"}
+      .item.active
+        = image_tag 'slide.jpg', alt: 'alt description'
+        .carousel-caption
+          \...
+    %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-example-generic", :role => "button"}
+      %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
+      %span.sr-only Previous
+    %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-example-generic", :role => "button"}
+      %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
+      %span.sr-only Next
+  .title
+    %span Каталог мебели
+  .row
+    - Category.all.each do |cat|
+      .col-md-2.col-sm-3.col-xs-4.text-center
+        = link_to cat do
+          %p= image_tag cat.image, width: '80'
+          %p= cat.name
+  .title
+    %span Популярная мебель
+  .title
+    %span Новые товары

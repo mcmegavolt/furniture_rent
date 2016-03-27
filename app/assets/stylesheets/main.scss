@@ -1,0 +1,63 @@
+body {
+  background: asset-url('bg.png');
+  .container {
+    background: #fff;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+    a {
+      &.current {
+        text-decoration: underline;
+      }
+    }
+    #left-nav {
+      font-size: 16px;
+    }
+    .borderless td, .borderless th {
+        border: none;
+    }
+    #header {
+      .row>div {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      
+      .logo {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 30px;
+        color: $brand-primary;
+        text-shadow: 2px 2px 3px #CCC;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      .slogan {
+        color: #666666;
+      }
+      .phone {
+        color: #AAA;
+        font-size: 18px;
+      }
+    }
+    nav {
+      -webkit-box-shadow: 0 2px 5px 1px #CCC;
+      box-shadow: 0 2px 5px 1px #CCC;
+    }
+    .title {
+      position: relative;
+      margin-bottom: 30px;
+      margin-top: 20px;
+      border-bottom: 1px solid $brand-primary;
+      span {
+        background: none repeat scroll 0 0 $brand-primary;
+        color: #FFFFFF;
+        display: inline-block;
+        font-weight: bold;
+        font-size: 24px;
+        letter-spacing: 0.025em;
+        line-height: 24px;
+        padding: 9px 17px;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+}

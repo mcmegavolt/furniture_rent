@@ -1,0 +1,48 @@
+#header
+  .row
+    .col-sm-3.text-center.hidden-xs
+      = link_to root_url, class: 'logo' do
+        Мебель
+        %br
+        в аренду
+    .col-md-4.col-sm-5.hidden-xs
+      %p.slogan Широкий ассортимент мебели и сопутствующего оборудования для проведения мероприятий любого уровня
+    .col-md-5.col-sm-4.text-right
+      %p.phone
+        = icon('phone')
+        +380 (93) 738-0011
+      %p.phone
+        +380 (63) 389-4919
+%nav.navbar.navbar-inverse
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Меню
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand.visible-xs{:href => "#"} Мебель в аренду
+    #navbar.navbar-collapse.collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li.active
+          %a{:href => "./"}
+            О компании
+            %span.sr-only (current)
+        %li.dropdown
+          %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            Каталог мебели
+            %span.caret
+          %ul.dropdown-menu{:role => "menu"}
+            - Category.all.each do |cat|
+              %li
+                = link_to cat.name, cat
+        %li
+          %a{:href => "../navbar-static-top/"} Услуги
+        %li
+          %a{:href => "../navbar-fixed-top/"} Аренда
+
+        %li
+          %a{:href => "../navbar-fixed-top/"} Новости
+
+        %li
+          %a{:href => "../navbar-fixed-top/"} Контакты

@@ -1,0 +1,24 @@
+// Custom variables
+
+$white: #fff;
+$yellow: #ffea5d;
+
+// Bootstrap variables
+
+$font-family-sans-serif: "Roboto", Helvetica, Arial, sans-serif;
+
+$brand-primary: darken(#428bca, 6.5%);
+
+$navbar-inverse-bg: $brand-primary;
+$navbar-border-radius: 0px;
+$navbar-inverse-border: 0px none;
+$navbar-inverse-link-color: $white;
+$navbar-inverse-link-hover-color: $yellow;
+$navbar-inverse-link-active-bg: $brand-primary;
+// $navbar-margin-bottom: 0px;
+
+$dropdown-bg: $brand-primary;
+$dropdown-border: 0px none;
+$dropdown-link-color: $white;
+$dropdown-link-hover-bg: none transparent;
+$dropdown-link-active-color: $yellow;

@@ -1,0 +1,17 @@
+@import "http://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext";
+
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import 'bootstrap-variables';
+@import 'bootstrap-custom';
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@import "fotorama";
+
+@import "main";
+@import "home";
+@import "categories";
+@import "item";
+

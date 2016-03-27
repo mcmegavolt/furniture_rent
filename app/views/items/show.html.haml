@@ -1,0 +1,65 @@
+#item
+  .row
+    .col-md-3
+      %h4 Каталог мебели
+      = render 'shared/left_nav', current_id: params[:category_id]
+    .col-md-9
+      .title
+        %span= resource.name
+      .row
+        .col-sm-6
+          #images
+            .fotorama{ data: { width: '100%', allowfullscreen: 'true', nav: 'thumbs', thumbwidth: '100', thumbheight: '80', auto: 'false' } }
+              - resource.images.each do |img|
+                = link_to img.image.url(:big) do
+                  = image_tag img.image.url(:normal)
+        .col-sm-6
+          #description
+            %p= resource.description
+            %table.table.table-condesed.borderless
+              %tr
+                %td
+                  Цена:
+                %td
+                  %b= number_to_currency resource.price
+              %tr
+                %td
+                  Цвет:
+                %td
+                  = resource.color
+              %tr
+                %td
+                  Размеры:
+
+                %td
+                  высота:
+                  %b= resource.height
+                  %br
+                  ширина:
+                  %b= resource.width
+                  %br
+                  глубина:
+                  %b= resource.depth
+                  %br
+              %tr
+                %td
+                  Состав:
+                %td
+                  = resource.composition
+              %tr
+                %td
+                  Артикул:
+                %td
+                  %b= resource.code
+      %br
+      %br
+      %h3 ДРУГИЕ ПОЗИЦИИ ДАННОГО РАЗДЕЛА:
+      %br
+      %br
+      .row
+        - resource.category.items.each do |item|
+          .col-xs-3
+            %p
+              = link_to [item.category, item] do
+                = image_tag item.images.last.image.url(:normal), class: 'img-responsive'
+            %p.text-center= link_to item.name, [item.category, item]
