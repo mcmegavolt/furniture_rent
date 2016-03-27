@@ -31,6 +31,8 @@ gem 'friendly_id', '~> 5.1.0'
 
 gem 'fotoramajs'
 
+gem 'pg'
+
 group :development do
   gem 'capistrano', '~> 3.4'
   gem 'capistrano-rvm'
