@@ -39,6 +39,7 @@ group :development do
   gem 'capistrano-bundler', '~> 1.1.2'
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-passenger'
+  gem 'capistrano-postgresql', '~> 4.2.0'
 end
 
 group :development, :test do
